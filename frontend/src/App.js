@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import signature from './Assets/images/signature.png';
 import { FaGithub } from "react-icons/fa6";
 import { AiFillLinkedin } from "react-icons/ai";
 import { motion } from 'motion/react';
+import Skills from './Pages/Skills';
 const App = () => {
     const openResume = () => {
         window.open("http://surl.li/wkifed", "_blank");
@@ -35,6 +36,7 @@ const App = () => {
                         <motion.button className='bg-red-500 h-10 w-28 rounded-md font-semibold font-redhat text-white select-none' onClick={() => { openResume() }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.25 }}>RESUME</motion.button>
                     </div>
                 </div>
+                <Skills />
             </div >
         </>
     );
