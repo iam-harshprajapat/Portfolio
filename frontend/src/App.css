@@ -1,0 +1,14 @@
+/* For the parent container of all sections */
+.snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+/* Individual snap pages */
+.snap-page {
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100%;
+}
