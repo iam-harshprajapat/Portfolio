@@ -34,10 +34,10 @@ const About = forwardRef((prop, ref) => {
 
   return (
     <div ref={ref} className="h-screen w-full pt-16 md:pl-[27%]">
-      <motion.div className="h-full w-full flex flex-col gap-20 pl-16">
+      <motion.div className="h-full w-full flex flex-col gap-20 md:pl-16 ">
         <motion.p
           ref={headingRef}
-          className="text-sky-500 underline underline-offset-8 text-2xl md:text-3xl font-semibold mt-9"
+          className="text-sky-500 underline underline-offset-8 text-2xl md:text-3xl font-semibold mt-9 text-center"
           variants={{
             hidden: { opacity: 0, y: -75 },
             visible: { opacity: 1, y: 0 },
@@ -48,7 +48,7 @@ const About = forwardRef((prop, ref) => {
         >
           About Me
         </motion.p>
-        <div className="w-[85%]">
+        <div className="w-[85%] pl-10">
           <motion.p className="text-white md:text-lg text-md md:font-semibold">
             Enthusiastic software developer with expertise in C, C++, OOPS, and
             Data Structures, along with hands-on Linux experience. Skilled in

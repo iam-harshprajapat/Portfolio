@@ -6,6 +6,7 @@ import Intro from "./Pages/Intro";
 import CustomCursor from "./utils/Cursor";
 import Card from "./Pages/Card";
 import About from "./Pages/About";
+import Tools from "./Pages/Tools";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -60,6 +61,9 @@ const App = () => {
         {!isMobile && isAboutVisible && <Card />}
         <div className="snap-page">
           <About ref={aboutRef} />
+        </div>
+        <div className="snap-page">
+          <Tools />
         </div>
         <Footer />
       </div>
