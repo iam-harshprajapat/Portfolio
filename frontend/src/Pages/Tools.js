@@ -14,6 +14,7 @@ import wireshark from "../Assets/images/ICONS/Wireshark.png";
 // import jmeter from "../Assets/images/ICONS/Jmeter.svg";
 // import lightroom from "../Assets/images/ICONS/Lightroom.svg";
 // import virtualbox from "../Assets/images/ICONS/VirtualBox.svg";
+import { motion } from "framer-motion";
 
 const Tools = () => {
   const toolsArray = [
@@ -71,13 +72,15 @@ const Tools = () => {
         </p>
         <div className="h-[65%] w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center md:pl-10 md:shadow-[0px_0px_10px] shadow-slate-800 gap-x-8">
           {toolsArray.map((tool, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="CARD bg-white h-11 w-36 md:h-14 gap-3 md:gap-4 md:w-44 flex rounded-lg p-4 items-center"
+              animate={{ x: [-20, 0], y: [300, 0] }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
             >
               <img src={tool.img} alt={tool.name} className="h-5 md:h-8" />
               <p className="text-md md:text-lg font-semibold">{tool.name}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

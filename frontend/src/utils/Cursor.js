@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isTextHovered, setIsTextHovered] = useState(false);
 
   // Update cursor position on mouse move
   useEffect(() => {
@@ -16,6 +17,30 @@ const CustomCursor = () => {
     };
   }, []);
 
+  // Add event listeners for detecting text hover
+  useEffect(() => {
+    const handleMouseEnter = () => setIsTextHovered(true);
+    const handleMouseLeave = () => setIsTextHovered(false);
+
+    // Select all text elements (e.g., paragraphs, headings)
+    const textElements = document.querySelectorAll(
+      "p, h1, h2, h3, h4, h5, h6, span"
+    );
+
+    textElements.forEach((el) => {
+      el.addEventListener("mouseenter", handleMouseEnter);
+      el.addEventListener("mouseleave", handleMouseLeave);
+    });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      textElements.forEach((el) => {
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    };
+  }, []);
+
   return (
     <>
       {/* Custom cursor */}
@@ -24,15 +49,15 @@ const CustomCursor = () => {
           position: "fixed",
           top: position.y,
           left: position.x,
-          width: "16px",
-          height: "16px",
-          backgroundColor: "rgb(14,165,233)",
+          width: isTextHovered ? "50px" : "20px", // Larger cursor on hover
+          height: isTextHovered ? "50px" : "20px", // Larger cursor on hover
+          backgroundColor: "white",
           borderRadius: "50%",
           pointerEvents: "none",
           transform: "translate(-50%, -50%)",
+          mixBlendMode: "difference",
           zIndex: 9999,
-          transition:
-            "width 0.2s ease, height 0.2s ease, background-color 0.2s ease",
+          transition: "width 0.2s ease, height 0.2s ease", // Smooth resizing
         }}
       />
     </>

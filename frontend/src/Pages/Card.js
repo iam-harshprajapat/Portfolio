@@ -5,12 +5,14 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Card = () => {
-  const openResume = () => {
-    window.open("http://surl.li/wkifed", "_blank");
+  const pdfURL = "../../PDF/Harsh_Prajapat_Resume.pdf";
+  const openResume = (e) => {
+    e.preventDefault();
+    window.open(pdfURL, "_blank", "noopener,nonreferrer");
   };
   return (
     <motion.div
-      className="h-[70%] absolute bg-white w-[22%] rounded-md translate-y-[-50%] top-[50%] translate-x-[8%] flex flex-col justify-center items-center"
+      className="h-[70%] absolute bg-[rgb(177_194_158)] w-[22%] rounded-md translate-y-[-50%] top-[50%] translate-x-[8%] flex flex-col justify-center items-center shadow-md"
       animate={{ x: [-80, 20], y: [-200] }}
       transition={{ delay: 0 }}
     >
@@ -41,9 +43,7 @@ const Card = () => {
       <div className=" w-full flex justify-center">
         <motion.button
           className="bg-sky-500 h-10 w-28 rounded-md font-semibold font-redhat text-white select-none mt-3"
-          onClick={() => {
-            openResume();
-          }}
+          onClick={openResume}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ x: 500, y: -500 }}

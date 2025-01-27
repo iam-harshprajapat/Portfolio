@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Tommy';
+    src: url('./FONTS/TOMMY_Bold.otf') format('opentype')
+}
