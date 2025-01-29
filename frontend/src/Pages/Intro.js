@@ -1,5 +1,5 @@
 import React from "react";
-import harsh from "../Assets/images/Harsh.png";
+import harsh from "../Assets/images/harsh.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useMotionValue, useTransform, animate } from "framer-motion";
@@ -28,42 +28,44 @@ const Intro = () => {
     return controls.stop;
   }, []);
   return (
-    <div className="relative h-screen w-full flex pt-20">
-      <img
-        className="IMAGE absolute md:h-screen top-64 left-20 md:top-12 opacity-60 md:left-2 transform -scale-x-100 md:scale-x-100"
-        src={harsh}
-        alt="bg"
-      />
-      <div className="h-full md:w-1/3 w-0"></div>
-      <div className="h-full flex-1 z-10 flex flex-col md:justify-start justify-center md:pl-0 pl-3">
-        <p className="text-white text-4xl md:text-7xl font-tommy w-44">
-          Hello,
-        </p>
-        <span>
-          <motion.p className="text-white text-4xl md:text-7xl font-tommy md:w-3/4">
-            {displayText}
-          </motion.p>
-        </span>
-        <p className="PARAGRAPH text-white w-1/2 mt-6">
-          Welcome to my portfolio! Explore my journey, skills, and projects that
-          reflect my passion and dedication. Feel free to browse around and
-          connect. Your feedback and interest mean a lot – thank you for
-          visiting!
-        </p>
-        <button
-          onClick={openResume}
-          className="w-28 rounded-md h-10 font-semibold text-white border-2 mt-4 cursor-pointer hover:bg-white hover:text-black"
-        >
-          View Resume
-        </button>
-        <motion.div
-          className="self-center"
-          animate={{ y: [0, -5, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <IoIosArrowDown className="text-white text-2xl " />
-        </motion.div>
+    <div className="relative h-screen pt-16 w-full flex flex-col items-center">
+      <div className=" h-[92%] w-full flex md:flex-row flex-col justify-center gap-2">
+        <motion.img
+          className="IMAGE md:h-full h-[90%] opacity-60 md:static absolute"
+          src={harsh}
+          alt="bg"
+          animate={{ opacity: [0, 0.6] }}
+          transition={{ duration: 2 }}
+        />
+        <div className=" md:w-1/2 w-full flex flex-col md:justify-center pl-4 md:pl-0">
+          <p className="text-white text-3xl md:text-7xl font-tommy w-1/3">
+            Hello,
+          </p>
+          <span>
+            <motion.p className="text-white text-3xl md:text-7xl font-tommy">
+              {displayText}
+            </motion.p>
+          </span>
+          <p className="PARAGRAPH text-white md:text-md text-sm  w-3/4 mt-3 md:mt-6">
+            Welcome to my portfolio! Explore my journey, skills, and projects
+            that reflect my passion and dedication. Feel free to browse around
+            and connect. Your feedback and interest mean a lot – thank you for
+            visiting!
+          </p>
+          <button
+            onClick={openResume}
+            className="w-24 md:w-28 rounded-md h-8 md:h-10 font-semibold text-sm md:text-md text-white border-2 mt-2 md:mt-4 cursor-pointer"
+          >
+            View Resume
+          </button>
+        </div>
       </div>
+      <motion.span
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
+      >
+        <IoIosArrowDown className="text-2xl text-white font-bold" />
+      </motion.span>
     </div>
   );
 };

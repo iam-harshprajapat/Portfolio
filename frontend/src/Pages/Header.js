@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="w-full h-16 flex items-center p-4 justify-between sticky top-0 shadow-[10px_10px_10px_rgba(15,23,42.0.8)] bg-black">
+    <div className="w-full h-16 flex items-center p-4 justify-between sticky top-0 shadow-[10px_10px_10px_rgba(15,23,42.0.8)] bg-black z-10">
       <motion.img
         src={signature}
         className="invert h-9 md:h-11 select-none"

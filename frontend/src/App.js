@@ -4,7 +4,6 @@ import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
 import Intro from "./Pages/Intro";
 import CustomCursor from "./utils/Cursor";
-import Card from "./Pages/Card";
 import About from "./Pages/About";
 import Tools from "./Pages/Tools";
 
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <>
       <div
-        className={`bg-black min-h-screen w-full 2xl:px-16 box-border  selection:bg-white selection:text-black snap-container
+        className={`bg-black min-h-screen w-full 2xl:px-24 box-border  selection:bg-white selection:text-black snap-container
         `}
       >
         <CustomCursor />
