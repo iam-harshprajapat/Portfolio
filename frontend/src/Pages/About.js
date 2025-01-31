@@ -1,67 +1,33 @@
-import React, { forwardRef, useRef, useEffect } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
-
-const About = forwardRef((prop, ref) => {
-  const headingRef = useRef(null);
-  const textRef = useRef(null);
-  const headingInView = useInView(headingRef, {
-    once: false,
-    margin: "0px 0px -20% 0px",
-  });
-  const textInView = useInView(textRef, {
-    once: false,
-    margin: "0px 0px -20% 0px",
-  });
-
-  const headingControl = useAnimation();
-  const textControl = useAnimation();
-
-  useEffect(() => {
-    if (headingInView) {
-      headingControl.start("visible");
-    } else {
-      headingControl.start("hidden");
-    }
-  }, [headingInView, headingControl]);
-
-  useEffect(() => {
-    if (textInView) {
-      textControl.start("visible");
-    } else {
-      textControl.start("hidden");
-    }
-  }, [textInView, textControl]);
-
+import React from "react";
+const About = () => {
   return (
-    <div ref={ref} className="h-screen w-full pt-16 md:pl-[27%]">
-      <motion.div className="h-full w-full flex flex-col gap-20 md:pl-16 ">
-        <motion.p
-          ref={headingRef}
-          className="text-sky-500 underline underline-offset-8 text-2xl md:text-3xl font-semibold mt-9 text-center"
-          variants={{
-            hidden: { opacity: 0, y: -75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate={headingControl}
-          transition={{ duration: 1 }}
-        >
-          About Me
-        </motion.p>
-        <div className="w-[85%] pl-10">
-          <motion.p className="text-white md:text-lg text-md md:font-semibold">
-            Enthusiastic software developer with expertise in C, C++, OOPS, and
-            Data Structures, along with hands-on Linux experience. Skilled in
-            HTML, CSS, JavaScript, and advancing in MERN stack technologies, I’m
-            developing a university social networking platform to showcase my
-            skills. Passionate about solving problems and collaborating
-            effectively, I aim to contribute to team success while thriving in
-            dynamic, challenging environments.
-          </motion.p>
-        </div>
-      </motion.div>
+    <div className="h-screen w-full pt-16">
+      <h1 className="md:ml-16 ml-4 md:mt-16 md:text-7xl text-4xl text-white font-tommy ">
+        A Bit About me
+      </h1>
+      <div className="md:pl-16 pl-4 pt-5 md:pt-10 flex flex-col gap-2 justify-center w-11/12">
+        <p className="text-white font-sans text-md md:text-lg font-bold">
+          🚀 Software Engineer | Tech Explorer
+        </p>
+        <p className="text-white font-sans text-md">
+          Hey! I’m a Software Engineer who loves exploring new tech and
+          occasionally winning battles against C & C++ memory leaks. 💥 If
+          debugging is like being a detective, then I’ve solved enough
+          “mysteries” to qualify for my own TV show. 🕵️‍♂️
+        </p>
+        <p className="text-white font-sans text-md">
+          To mix things up, I also learned the MERN stack (MongoDB, Express,
+          React, Node.js), where JavaScript keeps me on my toes. Some say it’s
+          unpredictable—I call it “fun.” 🎭
+        </p>
+        <p className="text-white font-sans text-md">
+          I break things (intentionally), fix them (eventually), and dream of
+          writing bug-free code (one day 🤞). Let’s build something awesome—and
+          hope it compiles on the first try! 🚀😂
+        </p>
+      </div>
     </div>
   );
-});
+};
 
 export default About;

@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         tommy: ["Tommy, sans", ...defaultTheme.fontFamily.sans],
+        para: ["Para"],
       },
     },
   },

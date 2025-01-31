@@ -6,3 +6,8 @@
     font-family: 'Tommy';
     src: url('./FONTS/TOMMY_Bold.otf') format('opentype')
 }
+
+@font-face {
+    font-family: 'Para';
+    src: url('./FONTS/BABELSANS_PARA.ttf') format('truetype');
+}

@@ -14,7 +14,7 @@ import wireshark from "../Assets/images/ICONS/Wireshark.png";
 // import jmeter from "../Assets/images/ICONS/Jmeter.svg";
 // import lightroom from "../Assets/images/ICONS/Lightroom.svg";
 // import virtualbox from "../Assets/images/ICONS/VirtualBox.svg";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 const Tools = () => {
   const toolsArray = [
@@ -65,22 +65,42 @@ const Tools = () => {
   ];
 
   return (
-    <div className="h-screen w-full pt-16 md:pl-[27%]">
+    <div className="h-screen w-full pt-16">
       <div className="h-full w-full flex flex-col gap-8 items-center">
-        <p className="text-sky-500 underline underline-offset-8 text-2xl md:text-3xl font-semibold mt-9">
-          Tools I've worked with
-        </p>
-        <div className="h-[65%] w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center md:pl-10 md:shadow-[0px_0px_10px] shadow-slate-800 gap-x-8">
+        <div className="w-full pl-28">
+          <p className="text-white text-4xl md:text-7xl font-tommy w-full">
+            Tools I've worked with
+          </p>
+        </div>
+        <div className="h-[65%] md:w-[60%] w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center md:pl-10 md:shadow-[0px_0px_10px] shadow-white gap-4">
           {toolsArray.map((tool, idx) => (
-            <motion.div
+            <div
               key={idx}
-              className="CARD bg-white h-11 w-36 md:h-14 gap-3 md:gap-4 md:w-44 flex rounded-lg p-4 items-center"
-              animate={{ x: [-20, 0], y: [300, 0] }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
+              style={{
+                boxShadow:
+                  "inset 0px 0px 20px  rgb(255,255,255,0.04), inset 0px 0px 20px  rgb(255,255,255,0.04)",
+              }}
+              className="h-32 w-28 rounded-md border-[1px] border-zinc-900 flex flex-col justify-center items-center gap-2 select-none"
             >
-              <img src={tool.img} alt={tool.name} className="h-5 md:h-8" />
-              <p className="text-md md:text-lg font-semibold">{tool.name}</p>
-            </motion.div>
+              <motion.div
+                animate={{
+                  scale: [1, 1.35, 1.35, 1, 1],
+                  rotate: [0, 0, 20, -20, 0],
+                  borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: easeInOut,
+                  repeatDelay: 1,
+                  times: [0, 0.2, 0.5, 0.8, 1],
+                }}
+                className=" bg-slate-600 size-16 bg-opacity-20 border-[1px] border-zinc-700 flex justify-center items-center p-2"
+              >
+                <img src={tool.img} alt={tool.name} className="h-5 md:h-7" />
+              </motion.div>
+              <p className="text-md text-zinc-400">{tool.name}</p>
+            </div>
           ))}
         </div>
       </div>

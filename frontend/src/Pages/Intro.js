@@ -3,7 +3,7 @@ import harsh from "../Assets/images/harsh.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Intro = () => {
   const pdfURL = "../../PDF/Harsh_Prajapat_Resume.pdf";
@@ -26,6 +26,7 @@ const Intro = () => {
       ease: "easeInOut",
     });
     return controls.stop;
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="relative h-screen pt-16 w-full flex flex-col items-center">
@@ -46,7 +47,7 @@ const Intro = () => {
               {displayText}
             </motion.p>
           </span>
-          <p className="PARAGRAPH text-white md:text-md text-sm  w-3/4 mt-3 md:mt-6">
+          <p className="PARAGRAPH font-sans text-white opacity-90  md:text-base text-sm  w-3/4 mt-3 md:mt-6">
             Welcome to my portfolio! Explore my journey, skills, and projects
             that reflect my passion and dedication. Feel free to browse around
             and connect. Your feedback and interest mean a lot – thank you for
