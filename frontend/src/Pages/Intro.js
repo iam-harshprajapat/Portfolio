@@ -1,5 +1,5 @@
 import React from "react";
-import harsh from "../Assets/images/harsh.png";
+import harsh from "../Images/harsh.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useMotionValue, useTransform, animate } from "framer-motion";

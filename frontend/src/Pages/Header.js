@@ -1,5 +1,5 @@
 import React from "react";
-import signature from "../Assets/images/signature.png";
+import signature from "../Images/signature.png";
 import { FaGithub } from "react-icons/fa6";
 import { AiFillLinkedin } from "react-icons/ai";
 import { motion } from "framer-motion";

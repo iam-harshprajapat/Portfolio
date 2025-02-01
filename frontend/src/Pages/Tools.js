@@ -1,16 +1,16 @@
 import React from "react";
-import bootstrap from "../Assets/images/ICONS/Bootstrap.svg";
-import canva from "../Assets/images/ICONS/Canva.svg";
-import chatgpt from "../Assets/images/ICONS/ChatGPT.svg";
-import figma from "../Assets/images/ICONS/Figma.svg";
-import git from "../Assets/images/ICONS/Git.svg";
-import framer from "../Assets/images/ICONS/Framer-Motion.svg";
-import mongo from "../Assets/images/ICONS/MongoDB.svg";
-import jira from "../Assets/images/ICONS/Jira.svg";
-import postman from "../Assets/images/ICONS/Postman.svg";
-import tailwind from "../Assets/images/ICONS/TailwindCSS.svg";
-import vscode from "../Assets/images/ICONS/VS-Code.svg";
-import wireshark from "../Assets/images/ICONS/Wireshark.png";
+import bootstrap from "../Images/ICONS/Bootstrap.svg";
+import canva from "../Images/ICONS/Canva.svg";
+import chatgpt from "../Images/ICONS/ChatGPT.svg";
+import figma from "../Images/ICONS/Figma.svg";
+import git from "../Images/ICONS/Git.svg";
+import framer from "../Images/ICONS/Framer-Motion.svg";
+import mongo from "../Images/ICONS/MongoDB.svg";
+import jira from "../Images/ICONS/Jira.svg";
+import postman from "../Images/ICONS/Postman.svg";
+import tailwind from "../Images/ICONS/TailwindCSS.svg";
+import vscode from "../Images/ICONS/VS-Code.svg";
+import wireshark from "../Images/ICONS/Wireshark.png";
 import { easeInOut, motion } from "framer-motion";
 
 const Tools = () => {

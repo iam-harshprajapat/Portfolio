@@ -22,10 +22,7 @@ const App = () => {
         <div className="snap-page">
           <About />
         </div>
-        <div
-          className="snap-page"
-          style={{ height: "auto", paddingBottom: "10px" }}
-        >
+        <div className="snap-page">
           <Tools />
         </div>
         <Footer />
