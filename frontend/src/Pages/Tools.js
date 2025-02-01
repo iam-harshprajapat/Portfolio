@@ -11,9 +11,6 @@ import postman from "../Assets/images/ICONS/Postman.svg";
 import tailwind from "../Assets/images/ICONS/TailwindCSS.svg";
 import vscode from "../Assets/images/ICONS/VS-Code.svg";
 import wireshark from "../Assets/images/ICONS/Wireshark.png";
-// import jmeter from "../Assets/images/ICONS/Jmeter.svg";
-// import lightroom from "../Assets/images/ICONS/Lightroom.svg";
-// import virtualbox from "../Assets/images/ICONS/VirtualBox.svg";
 import { easeInOut, motion } from "framer-motion";
 
 const Tools = () => {
@@ -25,6 +22,10 @@ const Tools = () => {
     {
       img: bootstrap,
       name: "Bootstrap",
+    },
+    {
+      img: tailwind,
+      name: "Tailwind CSS",
     },
     {
       img: canva,
@@ -65,14 +66,14 @@ const Tools = () => {
   ];
 
   return (
-    <div className="h-screen w-full pt-16">
+    <div className="h-auto w-full pt-16">
       <div className="h-full w-full flex flex-col gap-8 items-center">
-        <div className="w-full pl-28">
-          <p className="text-white text-4xl md:text-7xl font-tommy w-full">
+        <div className="w-full md:pl-28 pl-0">
+          <p className="text-white text-4xl md:text-7xl font-tommy w-full md:text-left text-center">
             Tools I've worked with
           </p>
         </div>
-        <div className="h-[65%] md:w-[60%] w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center md:pl-10 md:shadow-[0px_0px_10px] shadow-white gap-4">
+        <div className="h-[65%] md:w-[60%] w-[90%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center pl-8 md:pl-10 md:shadow-[0px_0px_10px] shadow-white gap-4">
           {toolsArray.map((tool, idx) => (
             <div
               key={idx}
