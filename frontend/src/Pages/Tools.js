@@ -1,17 +1,17 @@
 import React from "react";
-import bootstrap from "../Images/ICONS/Bootstrap.svg";
-import canva from "../Images/ICONS/Canva.svg";
-import chatgpt from "../Images/ICONS/ChatGPT.svg";
-import figma from "../Images/ICONS/Figma.svg";
-import git from "../Images/ICONS/Git.svg";
-import framer from "../Images/ICONS/Framer-Motion.svg";
-import mongo from "../Images/ICONS/MongoDB.svg";
-import jira from "../Images/ICONS/Jira.svg";
-import postman from "../Images/ICONS/Postman.svg";
-import tailwind from "../Images/ICONS/TailwindCSS.svg";
-import vscode from "../Images/ICONS/VS-Code.svg";
-import wireshark from "../Images/ICONS/Wireshark.png";
-import lightroom from "../Images/ICONS/lightroom.svg";
+import bootstrap from "../ICONS/Bootstrap.svg";
+import canva from "../ICONS/Canva.svg";
+import chatgpt from "../ICONS/ChatGPT.svg";
+import figma from "../ICONS/Figma.svg";
+import git from "../ICONS/Git.svg";
+import framer from "../ICONS/Framer-Motion.svg";
+import mongo from "../ICONS/MongoDB.svg";
+import jira from "../ICONS/Jira.svg";
+import postman from "../ICONS/Postman.svg";
+import tailwind from "../ICONS/TailwindCSS.svg";
+import vscode from "../ICONS/VS-Code.svg";
+import wireshark from "../ICONS/Wireshark.png";
+import lightroom from "../ICONS/lightroom.svg";
 import { easeInOut, motion } from "framer-motion";
 
 const Tools = () => {

@@ -1,11 +1,11 @@
 import React from "react";
-import CProgramming from "../Images/ICONS/C.png";
-import CppProgramming from "../Images/ICONS/CPP.png";
-import reactIcon from "../Images/ICONS/React.svg";
-import dataStructure from "../Images/ICONS/DS.png";
-import js from "../Images/ICONS/JS.svg";
-import html from "../Images/ICONS/HTML.svg";
-import css from "../Images/ICONS/CSS.svg";
+import CProgramming from "../ICONS/C.png";
+import CppProgramming from "../ICONS/CPP.png";
+import reactIcon from "../ICONS/React.svg";
+import dataStructure from "../ICONS/DS.png";
+import js from "../ICONS/JS.svg";
+import html from "../ICONS/HTML.svg";
+import css from "../ICONS/CSS.svg";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
