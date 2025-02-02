@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -44,7 +45,8 @@ const CustomCursor = () => {
   return (
     <>
       {/* Custom cursor */}
-      <div
+      <motion.div
+        className="md:block hidden dark:bg-white bg-black"
         style={{
           position: "fixed",
           top: position.y,
