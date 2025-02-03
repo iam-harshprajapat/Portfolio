@@ -10,47 +10,43 @@ const Header = ({ darkMode, setDarkMode }) => {
   const [circleVisible, setCircleVisible] = useState(false);
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
 
-  // Function to toggle dark mode with animation effect
   const handleThemeChange = (event) => {
-    // Get the button position
     const rect = event.target.getBoundingClientRect();
     setCirclePosition({
       x: rect.left + rect.width / 2,
       y: rect.top + rect.height / 2,
     });
 
-    setCircleVisible(true); // Show expanding circle
+    setCircleVisible(true);
     setTimeout(() => {
-      setDarkMode(!darkMode); // Toggle theme after animation
+      setDarkMode(!darkMode);
       setTimeout(() => {
-        setCircleVisible(false); // Hide circle after transition
+        setCircleVisible(false);
       }, 500);
     }, 500);
   };
 
   return (
     <>
-      {/* Expanding Circle (Covers Full Screen) */}
       {circleVisible && (
         <motion.div
-          className="fixed rounded-full bg-black dark:bg-white"
+          className="w-full fixed rounded-full bg-black dark:bg-white bg"
           style={{
             top: circlePosition.y,
             left: circlePosition.x,
             width: "50px",
             height: "50px",
             transform: "translate(-50%, -50%)",
-            zIndex: 50, // Ensures it appears above content
+            zIndex: 50,
           }}
           animate={{
-            scale: [0, 100], // Expands to cover the screen
+            scale: [0, 100],
             opacity: [1, 0],
           }}
           transition={{ duration: 1, ease: "easeInOut" }}
         ></motion.div>
       )}
-
-      <div className="w-full h-16 flex items-center p-4 justify-between fixed bg-white dark:bg-black top-0 z-10">
+      <div className="w-full h-16 flex items-center p-4 justify-between fixed bg-white dark:bg-black left-0 top-0 z-10">
         <motion.img
           src={signature}
           className="dark:invert h-9 md:h-11 select-none"
@@ -66,7 +62,6 @@ const Header = ({ darkMode, setDarkMode }) => {
           transition={{ duration: 1 }}
         >
           <div className="relative">
-            {/* Dark Mode Toggle Button */}
             {darkMode ? (
               <motion.div
                 animate={{ rotate: 360 }}

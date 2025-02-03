@@ -9,12 +9,23 @@ import Tools from "./Pages/Tools";
 import TechStack from "./Pages/TechStack";
 
 const App = () => {
-  // Fix: Convert stored value to a boolean
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark" ? true : false
+    localStorage.getItem("theme") === "dark" || !localStorage.getItem("theme")
+      ? true
+      : false
   );
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-  // Apply theme on mount and when theme changes
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -30,7 +41,7 @@ const App = () => {
       <div
         className={`bg-white min-h-screen w-full 2xl:px-24 box-border scroll-smooth dark:bg-black selection:bg-white selection:text-black `}
       >
-        <CustomCursor />
+        {!isMobile && <CustomCursor />}
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <Intro />
         <About />

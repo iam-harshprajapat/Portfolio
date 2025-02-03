@@ -39,7 +39,7 @@ const Intro = () => {
           animate={{ opacity: [0, 0.6] }}
           transition={{ duration: 2 }}
         />
-        <div className=" md:w-1/2 w-full flex flex-col md:justify-center pl-4 md:pl-0">
+        <div className=" md:w-1/2 w-full flex flex-col md:justify-center pl-4 md:pl-0 z-[1]">
           <p className="dark:text-white text-3xl md:text-7xl font-tommy w-1/3">
             Hello,
           </p>
