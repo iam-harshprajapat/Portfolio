@@ -7,7 +7,7 @@ import CustomCursor from "./utils/Cursor";
 import About from "./Pages/About";
 import Tools from "./Pages/Tools";
 import TechStack from "./Pages/TechStack";
-
+import { Analytics } from "@vercel/analytics/react";
 const App = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark" || !localStorage.getItem("theme")
@@ -49,6 +49,7 @@ const App = () => {
         <TechStack />
         <Footer />
       </div>
+      <Analytics />
     </>
   );
 };
