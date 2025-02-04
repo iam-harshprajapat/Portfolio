@@ -6,7 +6,6 @@ import figma from "../ICONS/Figma.svg";
 import git from "../ICONS/Git.svg";
 import framer from "../ICONS/Framer-Motion.svg";
 import mongo from "../ICONS/MongoDB.svg";
-import jira from "../ICONS/Jira.svg";
 import postman from "../ICONS/Postman.svg";
 import tailwind from "../ICONS/TailwindCSS.svg";
 import vscode from "../ICONS/VS-Code.svg";

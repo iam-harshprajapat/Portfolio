@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SnackbarProvider } from "notistack";
 import "./App.css";
 import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
@@ -8,6 +9,7 @@ import About from "./Pages/About";
 import Tools from "./Pages/Tools";
 import TechStack from "./Pages/TechStack";
 import { Analytics } from "@vercel/analytics/react";
+import Contact from "./Pages/Contact";
 const App = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark" || !localStorage.getItem("theme")
@@ -47,7 +49,9 @@ const App = () => {
         <About />
         <Tools />
         <TechStack />
+        <Contact />
         <Footer />
+        <SnackbarProvider />
       </div>
       <Analytics />
     </>
