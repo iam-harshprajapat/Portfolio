@@ -89,10 +89,20 @@ const Header = ({ darkMode, setDarkMode }) => {
             )}
           </div>
 
-          <a href="https://www.linkedin.com/in/harsh-prajapat-in/">
+          <a
+            href="https://www.linkedin.com/in/harsh-prajapat-in/"
+            target="_blank"
+            rel="noopener noreffer"
+          >
             <AiFillLinkedin className="dark:invert text-3xl cursor-pointer" />
           </a>
-          <FaGithub className="dark:invert text-3xl cursor-pointer" />
+          <a
+            href="https://github.com/iam-harshprajapat"
+            target="_blank"
+            rel="noopener noreffer"
+          >
+            <FaGithub className="dark:invert text-3xl cursor-pointer" />
+          </a>
         </motion.div>
       </div>
     </>
