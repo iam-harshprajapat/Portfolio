@@ -40,18 +40,16 @@ const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="md:block hidden dark:bg-white bg-black"
+        className="md:block hidden dark:bg-white bg-white mix-blend-difference"
         style={{
           position: "fixed",
           top: position.y,
           left: position.x,
           width: isTextHovered ? "50px" : "20px",
           height: isTextHovered ? "50px" : "20px",
-          backgroundColor: "white",
           borderRadius: "50%",
           pointerEvents: "none",
           transform: "translate(-50%, -50%)",
-          mixBlendMode: "difference",
           zIndex: 9999,
           transition: "width 0.2s ease, height 0.2s ease",
         }}

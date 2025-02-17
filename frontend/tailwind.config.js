@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         tommy: ["Tommy, sans", ...defaultTheme.fontFamily.sans],
         para: ["Para"],
+        stylish: ["stylish"],
+      },
+      colors: {
+        golden: "#f8dc72",
+        darkbrown: "#532200",
       },
     },
   },

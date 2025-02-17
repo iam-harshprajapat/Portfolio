@@ -3,7 +3,7 @@ import { FiExternalLink } from "react-icons/fi";
 import bloodbank from "../Images/Bloodbank.png";
 const Project = () => {
   return (
-    <div className="pt-16 w-full min-h-screen h-auto px-4">
+    <div className="pt-16 w-full min-h-screen h-auto px-4 dark:bg-black">
       <h1 className="font-tommy text-7xl dark:text-white">Projects</h1>
       <div className="mt-10 min-h-[50vh] h-auto w-full display flex justify-center">
         <div className="w-full max-w-5xl p-4 scrollbar-hidden grid grid-cols-1 md:grid-cols-2 gap-4 ">

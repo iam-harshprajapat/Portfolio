@@ -30,7 +30,7 @@ const Header = ({ darkMode, setDarkMode }) => {
     <>
       {circleVisible && (
         <motion.div
-          className="w-full fixed rounded-full bg-black dark:bg-white bg"
+          className="w-full fixed rounded-full bg-black dark:bg-white"
           style={{
             top: circlePosition.y,
             left: circlePosition.x,
@@ -46,10 +46,10 @@ const Header = ({ darkMode, setDarkMode }) => {
           transition={{ duration: 1, ease: "easeInOut" }}
         ></motion.div>
       )}
-      <div className="w-full h-16 flex items-center p-4 justify-between fixed bg-white dark:bg-black left-0 top-0 z-10">
+      <div className="w-full h-16 flex items-center p-4 justify-between fixed bg-darkbrown dark:bg-black left-0 top-0 z-10">
         <motion.img
           src={signature}
-          className="dark:invert h-9 md:h-11 select-none"
+          className="invert h-9 md:h-11 select-none"
           alt="Harsh Prajapat"
           initial={{ x: -200 }}
           animate={{ x: 0 }}
@@ -83,7 +83,7 @@ const Header = ({ darkMode, setDarkMode }) => {
               >
                 <IoMdMoon
                   onClick={handleThemeChange}
-                  className="text-black text-3xl cursor-pointer relative z-10"
+                  className="text-golden text-3xl cursor-pointer relative z-10"
                 />
               </motion.div>
             )}
@@ -94,14 +94,14 @@ const Header = ({ darkMode, setDarkMode }) => {
             target="_blank"
             rel="noopener noreffer"
           >
-            <AiFillLinkedin className="dark:invert text-3xl cursor-pointer" />
+            <AiFillLinkedin className="dark:text-white text-golden text-3xl cursor-pointer" />
           </a>
           <a
             href="https://github.com/iam-harshprajapat"
             target="_blank"
             rel="noopener noreffer"
           >
-            <FaGithub className="dark:invert text-3xl cursor-pointer" />
+            <FaGithub className="dark:text-white text-golden  text-3xl cursor-pointer" />
           </a>
         </motion.div>
       </div>

@@ -11,3 +11,8 @@
     font-family: 'Para';
     src: url('./FONTS/BABELSANS_PARA.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'stylish';
+    src: url('./FONTS/Welcome.ttf') format('truetype');
+}

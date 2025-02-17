@@ -29,7 +29,7 @@ const Intro = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div className="relative h-screen pt-16 w-full flex flex-col items-center dark:bg-black bg-white">
+    <div className="relative h-screen pt-16 w-full flex flex-col items-center dark:bg-black">
       <div className=" h-[92%] w-full flex md:flex-row flex-col justify-center gap-2">
         <motion.img
           onContextMenu={(e) => e.preventDefault()}
@@ -40,15 +40,15 @@ const Intro = () => {
           transition={{ duration: 2 }}
         />
         <div className=" md:w-1/2 w-full flex flex-col md:justify-center pl-4 md:pl-0 z-[1]">
-          <p className="dark:text-white text-3xl md:text-7xl font-tommy w-1/3">
+          <p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy w-1/3">
             Hello,
           </p>
           <span>
-            <motion.p className="dark:text-white text-3xl md:text-7xl font-tommy">
+            <motion.p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy">
               {displayText}
             </motion.p>
           </span>
-          <p className="PARAGRAPH font-sans dark:text-white opacity-90  md:text-base text-sm  w-3/4 mt-3 md:mt-6">
+          <p className="PARAGRAPH dark:text-white font-sans text-darkbrown dark:opacity-90  md:text-base text-sm  w-3/4 mt-3 md:mt-6">
             Welcome to my portfolio! Explore my journey, skills, and projects
             that reflect my passion and dedication. Feel free to browse around
             and connect. Your feedback and interest mean a lot – thank you for
@@ -56,7 +56,7 @@ const Intro = () => {
           </p>
           <button
             onClick={openResume}
-            className="w-24 md:w-28 rounded-md h-8 md:h-10 font-semibold text-sm md:text-md dark:text-white border-2 mt-2 md:mt-4 cursor-pointer dark:hover:bg-white hover:bg-black dark:hover:text-black hover:text-white dark:border-white border-black dard:border-white"
+            className="w-24 md:w-28 rounded-md h-8 md:h-10 font-semibold text-sm md:text-md dark:text-white text-darkbrown border-2 mt-2 md:mt-4 cursor-pointer dark:hover:bg-white hover:bg-darkbrown dark:hover:text-black hover:text-golden dark:border-white border-darkbrown"
           >
             View Resume
           </button>
@@ -66,7 +66,7 @@ const Intro = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
       >
-        <IoIosArrowDown className="text-2xl dark:text-white font-bold" />
+        <IoIosArrowDown className="text-2xl dark:text-white text-darkbrown font-bold" />
       </motion.span>
     </div>
   );
