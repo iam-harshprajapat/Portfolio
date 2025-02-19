@@ -11,8 +11,8 @@ module.exports = {
         stylish: ["stylish"],
       },
       colors: {
-        golden: "#f8dc72",
-        darkbrown: "#532200",
+        golden: "#FECA92",
+        darkbrown: "#4A2F1A",
       },
     },
   },

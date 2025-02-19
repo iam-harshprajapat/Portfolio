@@ -1,8 +1,8 @@
 import React from "react";
 const About = () => {
   return (
-    <div className="h-[80vh] w-full pt-16 dark:bg-black">
-      <h1 className="md:ml-16 ml-4 md:mt-16 md:text-7xl text-4xl dark:text-white text-darkbrown font-tommy ">
+    <div className="md:h-[80vh] h-screen w-full pt-10 bg-gradient-to-bl from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD]  dark:bg-none dark:bg-black">
+      <h1 className="md:pl-16 pl-4 md:text-7xl text-4xl dark:text-white text-darkbrown font-tommy ">
         A Bit About me
       </h1>
       <div className="md:pl-16 pl-4 pt-5 md:pt-10 flex flex-col gap-2 justify-center w-11/12">

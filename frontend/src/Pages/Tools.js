@@ -70,9 +70,9 @@ const Tools = () => {
   ];
 
   return (
-    <div className="h-auto min-h-screen w-full pt-16 dark:bg-black">
-      <div className="h-full w-full flex flex-col gap-8 items-center md:ml-16">
-        <div className="w-full pl-0">
+    <div className="h-auto min-h-screen w-full py-16 bg-gradient-to-bl from-[#C59965] via-[#FFF0D3] to-[#CA9D6A] dark:bg-none dark:bg-black ">
+      <div className="pl-4 md:pl-16 h-full w-full flex flex-col gap-8 items-center">
+        <div className="w-full ">
           <p className="dark:text-white text-darkbrown text-4xl md:text-7xl font-tommy w-full md:text-left text-center">
             Tools I've worked with
           </p>
@@ -101,7 +101,7 @@ const Tools = () => {
                   repeatDelay: 1,
                   times: [0, 0.2, 0.5, 0.8, 1],
                 }}
-                className=" dark:bg-slate-600 dark:bg-opacity-20 bg-darkbrown bg-opacity-40 size-16  border-[1px] dark:border-zinc-700 border-zinc-400 flex justify-center items-center p-2"
+                className=" dark:bg-slate-600 dark:bg-opacity-20 bg-darkbrown size-16  border-[1px] dark:border-zinc-700 border-zinc-400 flex justify-center items-center p-2"
               >
                 <img src={tool.img} alt={tool.name} className="h-5 md:h-7" />
               </motion.div>

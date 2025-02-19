@@ -30,7 +30,7 @@ const Header = ({ darkMode, setDarkMode }) => {
     <>
       {circleVisible && (
         <motion.div
-          className="w-full fixed rounded-full bg-black dark:bg-white"
+          className="fixed rounded-full bg-black dark:bg-white"
           style={{
             top: circlePosition.y,
             left: circlePosition.x,

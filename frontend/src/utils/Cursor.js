@@ -40,7 +40,7 @@ const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="md:block hidden dark:bg-white bg-white mix-blend-difference"
+        className="md:block hidden dark:bg-white bg-darkbrown mix-blend-difference"
         style={{
           position: "fixed",
           top: position.y,
