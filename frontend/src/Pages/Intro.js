@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import harsh from "../Images/harsh.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ const Intro = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div className="relative h-screen pt-16 w-full flex flex-col items-center bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black">
+    <div className="2xl:px-24 relative h-screen pt-16 w-full flex flex-col items-center bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black">
       <div className=" h-[92%] w-full flex md:flex-row flex-col justify-center gap-2">
         <motion.img
           onContextMenu={(e) => e.preventDefault()}

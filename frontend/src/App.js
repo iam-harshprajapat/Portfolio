@@ -42,7 +42,7 @@ const App = () => {
   return (
     <>
       <div
-        className={`min-h-screen w-full 2xl:px-24 box-border scroll-smooth dark:bg-black dark:selection:bg-white dark:selection:text-black selection:bg-darkbrown selection:text-golden`}
+        className={`min-h-screen w-full box-border scroll-smooth bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black dark:selection:bg-white dark:selection:text-black selection:bg-darkbrown selection:text-golden`}
       >
         {!isMobile && <CustomCursor />}
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />

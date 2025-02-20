@@ -56,7 +56,7 @@ const Contact = () => {
   }, [result]);
 
   return (
-    <div className="h-[80vh] w-full flex justify-center items-center md:px-0 px-4 bg-gradient-to-br  from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5]  dark:bg-none dark:bg-black">
+    <div className="h-[80vh] w-full flex justify-center items-center md:px-0 px-4 bg-gradient-to-bl  from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD] dark:bg-none dark:bg-black">
       <div className="md:h-[80%] h-auto md:w-1/2 w-full border-2 dark:border-white border-black rounded-lg p-6 flex md:flex-row flex-col items-center">
         {/* Left Section */}
         <div className="md:w-1/2 md:h-full w-full h-1/4">

@@ -3,9 +3,8 @@ import signature from "../Images/signature.png";
 import { FaGithub } from "react-icons/fa6";
 import { AiFillLinkedin } from "react-icons/ai";
 import { IoSunny } from "react-icons/io5";
-import { IoMdMoon } from "react-icons/io";
+import { IoMdMoon, IoIosMail } from "react-icons/io";
 import { motion } from "framer-motion";
-
 const Header = ({ darkMode, setDarkMode }) => {
   const [circleVisible, setCircleVisible] = useState(false);
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
@@ -24,6 +23,19 @@ const Header = ({ darkMode, setDarkMode }) => {
         setCircleVisible(false);
       }, 500);
     }, 500);
+  };
+
+  const handleClick = () => {
+    // Gmail compose URL with recipient prefilled
+    const email = "s.harshprajapat@gmail.com";
+    const subject = "Reached ";
+    const body = "Write your message here";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Open Gmail in a new tab with the compose window
+    window.open(gmailUrl, "_blank");
   };
 
   return (
@@ -89,6 +101,10 @@ const Header = ({ darkMode, setDarkMode }) => {
             )}
           </div>
 
+          <IoIosMail
+            onClick={handleClick}
+            className="dark:text-white text-golden text-3xl cursor-pointer"
+          />
           <a
             href="https://www.linkedin.com/in/harsh-prajapat-in/"
             target="_blank"
