@@ -35,7 +35,7 @@ const Intro = () => {
           onContextMenu={(e) => e.preventDefault()}
           className="IMAGE md:h-full h-[90%] md:static absolute select-none "
           src={harsh}
-          alt="bg"
+          alt="Harsh"
           animate={{ opacity: [0, 0.6] }}
           transition={{ duration: 2 }}
         />

@@ -37,7 +37,7 @@ const TechStack = () => {
   return (
     <div className="pt-16 min-h-screen h-auto  w-full bg-gradient-to-bl  from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD]  dark:bg-none dark:bg-black">
       <div className="w-full h-full flex flex-col gap-20">
-        <p className="md:pl-16 pl-4 dark:text-white text-darkbrown text-4xl md:text-7xl font-tommy">
+        <p className="md:pl-16 pl-4 dark:text-white text-darkbrown text-4xl md:text-7xl font-tommy md:text-left text-center">
           Technologies <br />I have worked on...
         </p>
         <div className="w-full h-auto px-10 grid items-center place-items-center grid-cols-2 md:grid-cols-7 gap-4">
