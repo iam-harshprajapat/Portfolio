@@ -34,8 +34,9 @@ const Intro = () => {
         <motion.img
           onContextMenu={(e) => e.preventDefault()}
           className="IMAGE md:h-full h-[90%] md:static absolute select-none "
-          src={harsh}
+          src="https://res.cloudinary.com/driqu2cgm/image/upload/f_auto/v1740896985/harsh_wk50ie.png"
           alt="Harsh"
+          loading="lazy"
           animate={{ opacity: [0, 0.6] }}
           transition={{ duration: 2 }}
         />
