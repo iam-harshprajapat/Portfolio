@@ -10,7 +10,7 @@ const Project = () => {
         Project
       </h1>
 
-      <div className="h-full w-full mt-10 p-4 flex flex-col gap-16">
+      <div className="scrollBlockm2 scrollBlock2 h-full w-full mt-10 p-4 flex flex-col gap-16">
         <div className="PROJECT w-full h-auto md:p-4 p-0 flex md:flex-row flex-col md:items-center justify-center gap-3 md:border-0 border-b-2 border-zinc-700 md:pb-0 pb-10 ">
           <video
             autoPlay
@@ -64,7 +64,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-        <div className="PROJECT w-full h-auto flex md:flex-row flex-col-reverse md:items-center justify-center gap-3 md:border-0 border-b-2 border-zinc-700 md:pb-0 pb-10">
+        <div className="scrollBlockm3 md:scrollBlock3 PROJECT w-full h-auto flex md:flex-row flex-col-reverse md:items-center justify-center gap-3 md:border-0 border-b-2 border-zinc-700 md:pb-0 pb-10">
           <div className="PROJECT_DETAIL md:w-[45%] h-full flex flex-col md:items-end items-start md:pr-10">
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl md:text-right">
               Generic Sorting Library
@@ -107,7 +107,7 @@ const Project = () => {
             />
           </video>
         </div>
-        <div className="PROJECT w-full h-auto md:p-4 flex md:flex-row flex-col md:items-center justify-center gap-3">
+        <div className="scrollBlockm2 md:scrollBlock2 PROJECT w-full h-auto md:p-4 flex md:flex-row flex-col md:items-center justify-center gap-3">
           <img
             src={bloodBank}
             alt="bloodbank"

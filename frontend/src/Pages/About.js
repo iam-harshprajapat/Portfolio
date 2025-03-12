@@ -1,7 +1,7 @@
 import React from "react";
 const About = () => {
   return (
-    <div className="2xl:px-24 md:px-20 px-4 md:h-[80vh] h-screen w-full pt-10 bg-gradient-to-bl from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD]  dark:bg-none dark:bg-black">
+    <div className="scrollBlock 2xl:px-24 md:px-20 px-4 md:h-[80vh] h-screen w-full pt-10 bg-gradient-to-bl from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD]  dark:bg-none dark:bg-black">
       <h1 className="md:text-7xl text-4xl dark:text-white text-darkbrown font-tommy ">
         A Bit About me
       </h1>
