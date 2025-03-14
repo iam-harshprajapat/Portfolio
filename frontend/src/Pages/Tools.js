@@ -70,7 +70,7 @@ const Tools = () => {
   ];
 
   return (
-    <div className=" scrollBlock 2xl:px-24 md:px-20 px-4 h-auto min-h-screen w-full bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black ">
+    <div className="2xl:px-24 md:px-20 px-4 h-auto min-h-screen w-full bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black ">
       <div className="h-full w-full flex flex-col gap-14 items-center">
         <div className="w-full ">
           <p className="dark:text-white text-darkbrown text-4xl md:text-7xl font-tommy w-full md:text-left text-center">

@@ -28,20 +28,24 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
     const formData = new FormData(event.target);
 
+    enqueueSnackbar("Sending...", { autoHideDuration: 1000 });
     formData.append("access_key", "ad5392e6-a5c6-4dc4-86a4-0b681c7e983a");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      var data = await response.json();
+    } catch (error) {
+      console.log(error);
+      return enqueueSnackbar("Unable to Sent Message", { variant: "default" });
+    }
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      enqueueSnackbar("Form Submitted Successfully", {
+        autoHideDuration: 3000,
+      });
       event.target.reset();
     } else {
       console.log("Error", data);
@@ -49,14 +53,8 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-    if (result) {
-      enqueueSnackbar(result, { variant: "default" });
-    }
-  }, [result]);
-
   return (
-    <div className="scrollBlock h-[80vh] w-full flex justify-center items-center md:px-0 px-4 bg-gradient-to-bl  from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD] dark:bg-none dark:bg-black">
+    <div className="h-[80vh] w-full flex justify-center items-center md:px-0 px-4 bg-gradient-to-bl  from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD] dark:bg-none dark:bg-black">
       <div className="md:h-[80%] h-auto md:w-1/2 w-full border-2 dark:border-white border-black rounded-lg p-6 flex md:flex-row flex-col items-center">
         {/* Left Section */}
         <div className="md:w-1/2 md:h-full w-full h-1/4">

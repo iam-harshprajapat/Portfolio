@@ -53,7 +53,7 @@ const App = () => {
         <Project />
         <Contact />
         <Footer />
-        <SnackbarProvider />
+        <SnackbarProvider maxSnack={2} />
       </div>
       <Analytics />
     </>
