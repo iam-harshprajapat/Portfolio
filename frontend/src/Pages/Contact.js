@@ -1,5 +1,5 @@
 import { enqueueSnackbar } from "notistack";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [visitorData, setVisitorData] = useState({
@@ -24,8 +24,6 @@ const Contact = () => {
     }));
   };
 
-  const [result, setResult] = useState("");
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -49,7 +47,7 @@ const Contact = () => {
       event.target.reset();
     } else {
       console.log("Error", data);
-      setResult(data.message);
+      return enqueueSnackbar("Unable to Sent Message", { variant: "default" });
     }
   };
 
