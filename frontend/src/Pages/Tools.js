@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import bootstrap from "../ICONS/Bootstrap.svg";
 import canva from "../ICONS/Canva.svg";
 import chatgpt from "../ICONS/ChatGPT.svg";
@@ -14,6 +17,9 @@ import lightroom from "../ICONS/lightroom.svg";
 import { easeInOut, motion } from "framer-motion";
 
 const Tools = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const toolsArray = [
     {
       img: postman,
@@ -55,10 +61,6 @@ const Tools = () => {
       img: mongo,
       name: "MongoDB",
     },
-    // {
-    //   img: jira,
-    //   name: "Jira",
-    // },
     {
       img: vscode,
       name: "VS Code",
@@ -80,14 +82,16 @@ const Tools = () => {
         <div className="h-full w-full flex items-center justify-center">
           <div className="w-auto gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:md:shadow-[0px_0px_10px] dark:shadow-white">
             {toolsArray.map((tool, idx) => (
-              <motion.div
+              <div
                 key={idx}
                 style={{
                   boxShadow:
                     "inset 0px 0px 20px  rgb(255,255,255,0.04), inset 0px 0px 20px  rgb(255,255,255,0.04)",
                 }}
                 className="md:h-32 md:w-28 h-28 w-24 rounded-md border-[1px] border-darkbrown dark:border-zinc-900 hover:border-zinc-900 flex flex-col justify-center items-center gap-2 select-none"
-                whileHover={{ y: -10 }}
+                data-aos="zoom-in"
+                data-aos-delay={150 * idx}
+                data-aos-duration="700"
               >
                 <motion.div
                   animate={{
@@ -109,7 +113,7 @@ const Tools = () => {
                 <p className="text-md text-zinc-800 dark:text-zinc-400">
                   {tool.name}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

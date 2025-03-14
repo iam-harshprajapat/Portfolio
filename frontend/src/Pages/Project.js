@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import vercel from "../ICONS/Vercel.svg";
 import render from "../ICONS/Render.svg";
 import bloodBank from "../Images/Bloodbank.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Project = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, anchorPlacement: "top-center" });
+  }, []);
   return (
     <div className="2xl:px-24 md:px-20 px-4 md:pt-0 pt-16 w-full min-h-screen h-auto bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black">
       <h1 className="HEADING md:text-7xl text-4xl font-tommy md:text-left text-center dark:text-white text-darkbrown">
@@ -19,13 +24,17 @@ const Project = () => {
             disablePictureInPicture
             onContextMenu={(e) => e.preventDefault()}
             className="PROJECT_CARD md:w-[45%] h-full rounded-md border-[1px] border-zinc-600"
+            data-aos="zoom-out-right"
           >
             <source
               src="https://res.cloudinary.com/driqu2cgm/video/upload/v1739728639/Campus_Link_b8kkla.3gp"
               type="video/mp4"
             />
           </video>
-          <div className="PROJECT_DETAIL md:w-[45%] h-full">
+          <div
+            className="PROJECT_DETAIL md:w-[45%] h-full"
+            data-aos="zoom-out-left"
+          >
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl">
               Campus Link
             </p>
@@ -65,7 +74,11 @@ const Project = () => {
           </div>
         </div>
         <div className="PROJECT w-full h-auto flex md:flex-row flex-col-reverse md:items-center justify-center gap-3 md:border-0 border-b-2 border-zinc-700 md:pb-0 pb-10">
-          <div className="PROJECT_DETAIL md:w-[45%] h-full flex flex-col md:items-end items-start md:pr-10">
+          <div
+            className="PROJECT_DETAIL md:w-[45%] h-full flex flex-col md:items-end items-start md:pr-10"
+            data-aos="zoom-out-right"
+            // data-aos-delay="200"
+          >
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl md:text-right">
               Generic Sorting Library
             </p>
@@ -100,6 +113,8 @@ const Project = () => {
             disablePictureInPicture
             onContextMenu={(e) => e.preventDefault()}
             className="PROJECT_CARD md:w-[45%] h-full rounded-md"
+            data-aos="zoom-out-left"
+            // data-aos-delay="200"
           >
             <source
               src="https://res.cloudinary.com/driqu2cgm/video/upload/v1739728700/generic_c_mrhoa1.3gp"
@@ -112,8 +127,14 @@ const Project = () => {
             src={bloodBank}
             alt="bloodbank"
             className="PROJECT_CARD md:w-[45%] md:pr-10 h-full rounded-md"
+            data-aos="zoom-out-right"
+            // data-aos-delay="400"
           />
-          <div className="PROJECT_DETAIL md:w-[45%] h-full">
+          <div
+            className="PROJECT_DETAIL md:w-[45%] h-full"
+            data-aos="zoom-out-left"
+            // data-aos-delay="400"
+          >
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl">
               Blood Bank
             </p>

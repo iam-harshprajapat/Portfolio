@@ -1,7 +1,11 @@
 import { enqueueSnackbar } from "notistack";
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
   const [visitorData, setVisitorData] = useState({
     name: "",
     email: "",
@@ -53,7 +57,10 @@ const Contact = () => {
 
   return (
     <div className="h-[80vh] w-full flex justify-center items-center md:px-0 px-4 bg-gradient-to-bl  from-[#F8DAC5] via-[#D8A76D] to-[#FFDFBD] dark:bg-none dark:bg-black">
-      <div className="md:h-[80%] h-auto md:w-1/2 w-full border-2 dark:border-white border-black rounded-lg p-6 flex md:flex-row flex-col items-center">
+      <div
+        className="md:h-[80%] h-auto md:w-1/2 w-full border-2 dark:border-white border-black rounded-lg p-6 flex md:flex-row flex-col items-center"
+        data-aos="flip-right"
+      >
         {/* Left Section */}
         <div className="md:w-1/2 md:h-full w-full h-1/4">
           <p className="dark:text-white text-darkbrown md:text-5xl text-3xl font-tommy md:text-left text-center md:w-40">
