@@ -10,7 +10,7 @@ const Project = () => {
     AOS.init({ duration: 1000, anchorPlacement: "top-center" });
   }, []);
   return (
-    <div className="2xl:px-24 md:px-20 px-4 md:pt-0 pt-16 w-full min-h-screen h-auto bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black">
+    <div className="2xl:px-24 md:px-20 px-4 md:pt-0 pt-16 w-full min-h-screen h-auto bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black overflow-x-hidden">
       <h1 className="HEADING md:text-7xl text-4xl font-tommy md:text-left text-center dark:text-white text-darkbrown">
         Project
       </h1>
