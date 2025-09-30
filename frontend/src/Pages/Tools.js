@@ -80,7 +80,7 @@ const Tools = () => {
           </p>
         </div>
         <div className="h-full w-full flex items-center justify-center">
-          <div className="w-auto gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:md:shadow-[0px_0px_10px] dark:shadow-white">
+          <div className="w-auto gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
             {toolsArray.map((tool, idx) => (
               <div
                 key={idx}

@@ -1,5 +1,3 @@
-import React from "react";
-import harsh from "../Images/harsh.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useMotionValue, useTransform, animate } from "framer-motion";
@@ -30,18 +28,25 @@ const Intro = () => {
   }, []);
   return (
     <div className="2xl:px-24 relative h-screen pt-16 w-full flex flex-col items-center bg-gradient-to-br from-[#FFDFBD] via-[#D8A76D] to-[#F8DAC5] dark:bg-none dark:bg-black">
-      <div className=" h-[92%] w-full flex md:flex-row flex-col justify-center gap-2">
+      <div className=" h-[92%] w-full flex md:flex-row md:justify-center items-center flex-col justify-center gap-2">
+        <div className="md:hidden block border-8 dark:border-white border-golden rounded-full h-48 w-48">
+          <img
+            src="https://res.cloudinary.com/driqu2cgm/image/upload/v1759251115/1000007310_oo6bwy.jpg"
+            alt="Harsh"
+            className="object-contain rounded-full"
+          />
+        </div>
         <motion.img
           onContextMenu={(e) => e.preventDefault()}
-          className="IMAGE md:h-full h-[90%] md:static absolute select-none "
-          src="https://res.cloudinary.com/driqu2cgm/image/upload/f_auto/v1740896985/harsh_wk50ie.png"
+          className="IMAGE md:h-full md:block hidden select-none"
+          src="https://res.cloudinary.com/driqu2cgm/image/upload/v1759251115/1000007310_oo6bwy.jpg"
           alt="Harsh"
           loading="lazy"
-          animate={{ opacity: [0, 0.6] }}
+          animate={{ opacity: [0, 1] }}
           transition={{ duration: 2 }}
         />
-        <div className=" md:w-1/2 w-full flex flex-col md:justify-center pl-4 md:pl-0 z-[1]">
-          <p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy w-1/3">
+        <div className=" md:w-1/2 w-full flex flex-col md:justify-center md:items-start items-center z-[1]">
+          <p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy w-1/3  md:text-left text-center">
             Hello,
           </p>
           <span>

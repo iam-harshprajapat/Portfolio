@@ -30,6 +30,7 @@ const About = () => {
           data-aos-delay="300"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-bottom"
+          data-aos-opacity="0"
         >
           Hey! I’m a Software Engineer who loves exploring new tech and
           occasionally winning battles against C & C++ memory leaks. 💥 If

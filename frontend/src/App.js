@@ -11,6 +11,7 @@ import TechStack from "./Pages/TechStack";
 import { Analytics } from "@vercel/analytics/react";
 import Contact from "./Pages/Contact";
 import Project from "./Pages/Project";
+import { ExperienceTimeline } from "./Pages/Experience";
 const App = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark" || !localStorage.getItem("theme")
@@ -48,6 +49,7 @@ const App = () => {
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <Intro />
         <About />
+        <ExperienceTimeline/>
         <Tools />
         <TechStack />
         <Project />
