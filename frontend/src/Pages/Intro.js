@@ -4,7 +4,7 @@ import { useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect } from "react";
 
 const Intro = () => {
-  const pdfURL = "/Harsh_Prajapat_Resume.pdf";
+  const pdfURL = "https://res.cloudinary.com/driqu2cgm/image/upload/v1765565159/Harsh_Prajapat_Resume_iudkli.pdf";
   const openResume = (e) => {
     e.preventDefault();
     window.open(pdfURL, "_blank", "noopener,nonreferrer");
@@ -40,7 +40,7 @@ const Intro = () => {
           onContextMenu={(e) => e.preventDefault()}
           className="IMAGE md:h-full md:block hidden select-none"
           src="https://res.cloudinary.com/driqu2cgm/image/upload/v1759251115/1000007310_oo6bwy.jpg"
-          alt="Harsh"
+          alt="Harsh Prajapat"
           loading="lazy"
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 2 }}

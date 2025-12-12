@@ -77,7 +77,7 @@ const Project = () => {
           <div
             className="PROJECT_DETAIL md:w-[45%] h-full flex flex-col md:items-end items-start md:pr-10"
             data-aos="zoom-out-right"
-            // data-aos-delay="200"
+          // data-aos-delay="200"
           >
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl md:text-right">
               Generic Sorting Library
@@ -114,7 +114,7 @@ const Project = () => {
             onContextMenu={(e) => e.preventDefault()}
             className="PROJECT_CARD md:w-[45%] h-full rounded-md"
             data-aos="zoom-out-left"
-            // data-aos-delay="200"
+          // data-aos-delay="200"
           >
             <source
               src="https://res.cloudinary.com/driqu2cgm/video/upload/v1739728700/generic_c_mrhoa1.3gp"
@@ -128,12 +128,12 @@ const Project = () => {
             alt="bloodbank"
             className="PROJECT_CARD md:w-[45%] md:pr-10 h-full rounded-md"
             data-aos="zoom-out-right"
-            // data-aos-delay="400"
+          // data-aos-delay="400"
           />
           <div
             className="PROJECT_DETAIL md:w-[45%] h-full"
             data-aos="zoom-out-left"
-            // data-aos-delay="400"
+          // data-aos-delay="400"
           >
             <p className="font-tommy dark:text-white text-darkbrown md:text-3xl text-xl">
               Blood Bank
