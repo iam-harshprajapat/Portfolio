@@ -25,19 +25,6 @@ const Header = ({ darkMode, setDarkMode }) => {
     }, 500);
   };
 
-  const handleClick = () => {
-    // Gmail compose URL with recipient prefilled
-    const email = "s.harshprajapat@gmail.com";
-    const subject = "Reached ";
-    const body = "Write your message here";
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    // Open Gmail in a new tab with the compose window
-    window.open(gmailUrl, "_blank");
-  };
-
   return (
     <>
       {circleVisible && (
@@ -100,22 +87,22 @@ const Header = ({ darkMode, setDarkMode }) => {
               </motion.div>
             )}
           </div>
-
-          <IoIosMail
-            onClick={handleClick}
-            className="dark:text-white text-golden text-3xl cursor-pointer"
-          />
+          <a href="mailto:s.harshprajapat@gmail.com">
+            <IoIosMail
+              className="dark:text-white text-golden text-3xl cursor-pointer"
+            />
+          </a>
           <a
             href="https://www.linkedin.com/in/harsh-prajapat-in/"
             target="_blank"
-            rel="noopener noreffer"
+            rel="noopener noreferrer"
           >
             <AiFillLinkedin className="dark:text-white text-golden text-3xl cursor-pointer" />
           </a>
           <a
             href="https://github.com/iam-harshprajapat"
             target="_blank"
-            rel="noopener noreffer"
+            rel="noopener noreferrer"
           >
             <FaGithub className="dark:text-white text-golden  text-3xl cursor-pointer" />
           </a>
