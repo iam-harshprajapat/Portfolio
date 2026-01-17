@@ -4,7 +4,7 @@ Welcome to my portfolio repository! This portfolio showcases my projects, skills
 
 ## 🔗 Live Deployment
 
-You can view the live version of my portfolio here: [Portfolio Deployment Link](harsh-prajapat-portfolio.vercel.app)
+You can view the live version of my portfolio here: [Portfolio Deployment Link](https://harshprajapat.online)
 
 ## 🛠️ Technologies Used
 
