@@ -32,7 +32,7 @@ const Intro = () => {
         <div className="md:hidden block border-8 dark:border-white border-golden rounded-full h-48 w-48">
           <img
             src="https://res.cloudinary.com/driqu2cgm/image/upload/v1759251115/1000007310_oo6bwy.jpg"
-            alt="Harsh"
+            alt="Harsh Prajapat"
             className="object-contain rounded-full"
           />
         </div>
@@ -49,11 +49,11 @@ const Intro = () => {
           <p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy w-1/3  md:text-left text-center">
             Hello,
           </p>
-          <span>
-            <motion.p className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy">
+          <h1>
+            <motion.h1 className="dark:text-white text-darkbrown text-3xl md:text-7xl font-tommy">
               {displayText}
-            </motion.p>
-          </span>
+            </motion.h1>
+          </h1>
           <p className="PARAGRAPH dark:text-white font-sans text-darkbrown dark:opacity-90  md:text-base text-sm  w-3/4 mt-3 md:mt-6">
             Welcome to my portfolio! Explore my journey, skills, and projects
             that reflect my passion and dedication. Feel free to browse around
