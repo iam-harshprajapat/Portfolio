@@ -60,7 +60,7 @@ const Header = ({ darkMode, setDarkMode }) => {
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="relative">
+          <div className="relative hidden">
             {darkMode ? (
               <motion.div
                 animate={{ rotate: 360 }}
